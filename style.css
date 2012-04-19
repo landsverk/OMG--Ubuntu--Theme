@@ -1,15 +1,22 @@
-/*   
+/* BLA BLA BLA
 Theme Name: OMG! Ubuntu!
-Theme URI: http://github.com/gunjam/OMG--Ubuntu--Theme
 Description: The official WordPress theme for omgubuntu.co.uk
-Author: Niall Molloy
+Design: Benjamin Humphrey, Author: Niall Molloy
 Author URI: http://purplejam.co.uk
 Version: 1.4
-Tags: colours, exclamation marks, rant support
+Tags: ubuntu, linux, technology, opensource, canonical
 .
 The Shape Theme for WordPress is copyright ThemeShapes http://themeshapes.com/
 Like WordPress, this work is released under GNU General Public License, version 2 (GPL).
 http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+
+*******************************
+Changelog for landsverk@github:
+-
+19.04.2012
+Moved old content to [old]style.css
+Synced content with omgubuntu.co.uk/style.css
+*******************************
 .
 */
 
@@ -138,7 +145,7 @@ body {
 }
 body, input, textarea {
 	color: #4f4f4f;    
-	font: 13px "Droid Sans","Ubuntu","UbuntuBeta","Arial",sans-serif;
+	font: 13px "Ubuntu","UbuntuBeta","Droid Sans","Arial",sans-serif;
 	line-height: 1.5;
 }
 
@@ -159,8 +166,27 @@ h2 {
 }
 h3 {
 	font-size: 16px;
-	color: #404448;
-	font-weight: bold;
+	color: #dd4814;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+h4 {
+	font-size: 16px;
+	color: #4d1f41;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+h5 {
+	font-size: 13px;
+	color: #dd4814;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+h6 {
+	font-size: 13px;
+	color: #4d1f41;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
 }
 hr {
 	background-color: #999;
@@ -341,6 +367,7 @@ img.aligncenter {
 }
 
 
+
 /* Pullquotes
 -------------------------------------------------------------- */
 
@@ -359,17 +386,17 @@ blockquote.right {
 	width: 33%;
 }
 
-
 /* =Root
 -------------------------------------------------------------- */
 
 body {
 	margin: 0;
+	padding-top: 20px;
 }
 #main {
 	margin: 0 auto;
 	width: 960px;
-	padding: 50px 0;
+	padding: 0px 0 50px;
 	overflow: hidden;
 	background-color: #fff;
 	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
@@ -377,6 +404,9 @@ body {
 	-webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 	position: relative;
 	z-index: 1;
+
+	margin-bottom: 50px;
+	padding-bottom: 150px;
 }
 
 /* =Sprites
@@ -393,13 +423,13 @@ body {
 	background: -moz-linear-gradient(top, #fff, #fff 22%, #fefefe 22%, #8e8e8e 43%, #7d2755 43%, #4d1f41 93.5%, #b4b3b3 93.5%, #f7f6f5 98%, #f7f6f5);
 	background: -webkit-gradient(linear,0 0,0 100%,color-stop(0, #FFFFFF),color-stop(0.22, #FFFFFF),color-stop(0.22, #FEFEFE),color-stop(0.43, #8E8E8E),color-stop(0.43, #7D2755),color-stop(0.935, #4D1f41),color-stop(0.935, #B4B3B3),color-stop(0.99, #F7F6F5),color-stop(1, #F7F6F5));
 	background-position: 0 -86px;
-	-webkit-background-size: 1px 199px;
-	-moz-background-size: 1px 199px;
-	background-size: 1px 199px;
+	-webkit-background-size: 100% 199px;
+	-moz-background-size: 100% 199px;
+	background-size: 100% 199px;
 }
 #header {
 	height: 113px;
-	margin: 50px 0 -13px;
+	margin: 40px 0 -13px;
 }
 #masthead {
 	width: 960px;
@@ -424,6 +454,69 @@ body {
 	display: none;
 }
 
+/* --
+
+	#body-wrap {
+		clear: both;
+		overflow: auto;
+		margin-top: 80px;
+	}
+		#body { float: left; }
+			#banners {
+				width: 630px;
+				height: 221px;
+				overflow: hidden;
+				background: #fff;
+			}
+			.omgbanners {
+				width: 630px;
+				height: 220px;
+				overflow: hidden;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				border-bottom: 1px solid #aaa;
+			}
+				.omgbanners .omgbanner_image {
+					display: block;
+					width: 630px;
+					height: 220px;
+					overflow: hidden;
+					white-space: nowrap;
+				}
+				.omgbanners li {
+					list-style: none;
+					margin: 0;
+					padding: 0;
+					display: block;
+					float: left;
+					height: 33px;
+				}
+					.omgbanners li img {
+						display: none;
+					}
+					.omgbanners li .banner-caption {
+						display: block;
+
+						background: url(../images/banner-caption.png) no-repeat right 0px;
+
+						position: relative;
+						top: -30px;
+						z-index: 30;
+						height: 30px;
+						line-height: 35px; /* 5px higher to work nicer on dark images */
+						/*border-right: 1px solid rgba(0,0,0,0.5);*/
+						color: #666;
+						color: rgba(0,0,0,0.5); /* rgba to work better on varied backgrounds */
+						text-align: center;
+						text-decoration: none;
+					}
+					.omgbanners li.active .banner-caption {
+						border-bottom: 3px solid #fff;
+						height: 27px;
+						line-height: 34px;
+					}
+
 /* =Menu
 -------------------------------------------------------------- */
 
@@ -446,6 +539,7 @@ body {
 	-webkit-transition:background-position 0.15s ease-in;
 	-moz-transition:background-position 0.15s ease-in;
 	-o-transition:background-position 0.15s ease-in;
+
 }
 .menu-primary-menu-container .menu li:hover {
 	background-position: 0 top;
@@ -460,6 +554,7 @@ body {
 	width: 50px;
 	display: inline-block;
 	font-weight: bold;
+
 }
 #menu-item-19 a {
 	background-position: -50px 0;
@@ -490,7 +585,7 @@ body {
 	-webkit-box-shadow: 1px 1px 4px #666 inset;
 	font-size: 18px;
 }
-#searchsubmit {
+#searchsubmit {	
 	background-color: #666;
 	background-position: -223px 0;
 	border: none;
@@ -500,7 +595,13 @@ body {
 	cursor: pointer;
 }
 #searchsubmit:hover {
-	background-color: #898989;
+	background-color: #666;
+	background-position: -223px 0;
+	border: none;
+	width: 32px;
+	height: 32px;
+	text-indent: 9999px;
+	cursor: pointer;
 }
 .menu-secondary-menu-container {
 	clear: both;
@@ -635,6 +736,11 @@ div.cat-links a.cat-wallpaper {
 div.cat-links a.cat-poll {
 	background-position: -223px -400px;
 }
+
+div.cat-links a.cat-debian  {  background: url(http://www.omgubuntu.co.uk/wp-content/uploads/2011/02/debian.png) no-repeat center 5px #898989 !important; }
+div.cat-links a.cat-hardware-2  {  background: url(http://www.omgubuntu.co.uk/wp-content/uploads/2011/02/Computer.png) no-repeat center 5px #898989 !important; }
+div.cat-links a.cat-development  {  background: url(http://omgubuntu.co.uk/wp-content/uploads/2011/06/development.png) no-repeat center 5px #898989 !important; }
+
 .tag-links {
 	border-bottom: 1px dotted #EFEFEF;
 	margin: 0 0 10px;
@@ -670,16 +776,6 @@ div.tag-links a {
 }
 .entry-meta {
 	font-size: 11px;
-}
-.author-rss {
-	background: url("images/author-rss.png") repeat scroll 0 0 #F15D22;
-	display: inline-block;
-	width: 13px;
-	height: 13px;
-	text-indent: -9000px;
-}
-.author-rss:hover {
-	background-color: #F19B22;
 }
 .page-link {
 	margin: 0 0 5px 0;
@@ -735,16 +831,19 @@ div.tag-links a {
 	opacity: 1;
 }
 .social-stuff-digg a {
-	background-position: 16px 0;
-}
-.social-stuff-email a {
 	background-position: 32px 0;
 }
-.social-stuff-facebook a {
+.social-stuff-email a {
 	background-position: 48px 0;
 }
-.social-stuff-stumble a {
+.social-stuff-facebook a {
 	background-position: 64px 0;
+}
+.social-stuff-stumbleupon a, .social-stuff-stumble a {
+	background-position: 80px 0;
+}
+.social-stuff-reddit a {
+	background-position: 16px 0;
 }
 .entry-share {
 	height: 20px;
@@ -775,6 +874,8 @@ div.tag-links a {
 .blogger-post-footer {
 	display: none;
 }
+
+
 /* =Gallery
 -------------------------------------------------------------- */
 .gallery-item {
@@ -866,10 +967,11 @@ div.tag-links a {
 .widget-title {
 	border-bottom: 1px solid #E4E4E4;
 	font-size: 20px;
+	font-weight: bold;
 	text-transform: uppercase;
 	line-height: 1.1;
 	position: relative;
-	color: #772953;
+	color: #dd4814;
 	margin: 0 0 10px auto;
 }
 #most-read-posts h3 {
@@ -887,21 +989,29 @@ div.tag-links a {
 	display: block;
 	padding: 5px 35px 5px 0;
 	font-family: "Ubuntu","UbuntuBeta","Arial",sans-serif;
-	color: #FF6500;
 }
 #most-read-posts a:hover {
-	color: #08a8c5 !important;
+	color: #f15d22 !important;
 	text-shadow: 0 -1px 0 #fff;
 }
 #most-read-posts span {
-	color: #a9a9a9;
+	color: #5d666e;
 	position: absolute;
 	right: 5px;
 	top: 50%;
 	margin-top: -12px;
 	font-size: 24px;
-	font-family: "Arial", sans-serif;
+	font-family: "Droid Sans", "Arial", sans-serif;
 }
+
+
+#ask-ubuntu-hot-questions h3
+{
+	background: url(/wp-includes/images/askubuntu-widget.png) no-repeat;
+	padding: 10px 0px 15px 50px;
+	font-family: Ubuntu;
+}
+
 /* =Footer
 -------------------------------------------------------------- */
 
@@ -969,6 +1079,75 @@ div.tag-links a {
 	padding: 13px 0 0 169px;
 }
 
+
+#footer-new
+{
+	border-top: 1px solid #ccc;
+	background: #f7f6f5;
+	min-height: 100px;
+	margin-top: -150px;
+	color: #666;
+
+	position: absolute;
+	left: 50%;
+	width: 960px;
+	margin-left: -480px;
+	z-index: 50;
+}
+
+#footer-new ul
+{
+	float: left;
+	margin: 0px;
+	padding: 65px 0px 0px 10px;
+	list-style: none;
+	color: inherit;
+}
+
+	#footer-new li
+	{
+		float: left;
+		height: 15px;
+		overflow: visible auto;
+		color: inherit;
+	}
+	#footer-new li + li
+	{
+		border-left: 1px solid #888;
+	}
+
+	#footer-new li a
+	{
+		display: block;
+		text-decoration: none;
+		font-size: 10pt !important;
+		padding: 10px;
+		margin-top: -12px;
+		color: inherit;
+		text-transform: none !important;
+	}
+
+#footer-new #ohso-copy, #footer-new #ohso-logo
+{
+	float: right;
+	color: inherit;
+}
+	#ohso-copy
+	{
+		font-size: 8pt;
+		padding: 30px 20px 0px;
+	}
+
+	#ohso-logo
+	{
+		width: 150px;
+		height: 100px;
+		text-indent: -150px;
+		overflow: hidden;
+		background: url(/natty/images/assets/ohso.png) no-repeat 50%;
+	}
+
+
 /* =Disqus stuff
 -------------------------------------------------------------- */
 
@@ -1004,7 +1183,7 @@ li.dsq-widget-item:nth-child(odd) {
 	color: #08A8C5;
 }
 .dsq-widget-item a[href*=disqus]:first-child {
-	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAALCAQAAAAHUG+QAAAAT0lEQVQI113OSRKCAAxFwdz/sl8QpIhS7QIHIFmls3nlMlHHczOdaRHx+FKLmLRWvIxi0J+t/b/8oBWbuxisf4KnmxiPBKuI+dzFfE3d69++GsNGkjzezAAAAABJRU5ErkJggg%3D%3D) no-repeat 59px 10px;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAALCAQAAAAHUG+QAAAAAXNSR0IArs4c6QAAAEtJREFUCB0FwYkNgwAQA7Dbf9nwFhFArj0AADEA8DnEAHCJ+BmgIg5Vw2sTq6qqqYhLVVUNn12sblU1wGMRm6oB4BZxGgDgFAMAEH++GsNGVb33QgAAAABJRU5ErkJggg%3D%3D) no-repeat 59px 10px;
 	display: block;
 	position: relative;
 	top: -10px;
@@ -1014,7 +1193,7 @@ li.dsq-widget-item:nth-child(odd) {
 	float: left;
 }
 li.dsq-widget-item:nth-child(odd) a[href*=disqus]:first-child {
-	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAANCAYAAAB/9ZQ7AAAAqUlEQVQoz42SUQvCIBSF/f+/bShUCHsJqahRZNl0u86NW3fhxrK2hPOgfMeL58gupcMsy3otLUawOp6Qc74MW/BIBpLzzTzsQ4skU8Fgov0sHKVd1Rtursa26+ZhkoPm65QJDE3Aq33fvCvO/aOllAgAU5jGElTcH7hab4Y4o4wxyMp6TEPmeQLlr7MQwpjzdn9IICEEWmvTUj5BrfXvBiOklFqu+9+/8QTx2SItRgo3nQAAAABJRU5ErkJggg%3D%3D) no-repeat 3px 10px;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAANCAYAAAB/9ZQ7AAAAAXNSR0IArs4c6QAAAKlJREFUKJGVkmELwiAQhvf/f9uYUCH4JaSijSLLptupG1e32NbacCQ8H5TnPHzP5FpaTNO0Y20lJMtzjlmWrcsGHFIBYZ2Pyy40SOgKhiLaR+UeZauu4G5rbNo2LhMW/GKXiQw+4M18bj4Ul+7RnHMEgKlMbUkqHk/cbHdDnD1aa0zKekyDCzGTxPsshDDmvD+eZhJjDI0x86H8ikqp5ei+ZSllfCj//I0X8dkiLbpkNA0AAAAASUVORK5CYII%3D) no-repeat 3px 10px;
 	float: right;
 	left: 77px;
 	margin: 0 0 -50px -70px;
@@ -1079,12 +1258,12 @@ p.dsq-widget-meta a:first-child {
 	clear: both;
 	border: 1px solid #efefef;
 }
-.contact-field, .contact-submit, .contact-field input, .contact-field textarea, .captcha-723 input {
+.contact-field, .contact-submit, .contact-field input, .contact-field textarea, .contact-submit [type=text] {
 	border-radius: 5px 5px 5px 5px;
 	-moz-border-radius: 5px 5px 5px 5px;
 	-webkit-border-radius: 5px 5px 5px 5px;
 }
-.contact-field input, .contact-field textarea, .captcha-723 input {
+.contact-field input, .contact-field textarea, .contact-submit [type=text] {
 	box-shadow: 1px 1px 2px #D8D8D8 inset;
 	-moz-box-shadow: 1px 1px 2px #D8D8D8 inset;
 	-webkit-box-shadow: 1px 1px 2px #D8D8D8 inset;
@@ -1094,7 +1273,7 @@ p.dsq-widget-meta a:first-child {
 	float: right;
 	height: 17px;
 }
-.contact-field input:focus, .captcha-723 input:focus, .contact-field textarea:focus {
+.contact-field input:focus, .contact-submit [type=text]:focus, .contact-field textarea:focus {
 	border-color: #F15D22;
 }
 .contact-field textarea {
@@ -1144,6 +1323,30 @@ img.dsq-widget-avatar, .page-link a, #gallery-1 img, .contact-field input, .cont
 -------------------------------------------------------------- */
 #wpstats {
 	display: none;
+
+}
+blockquote { 
+	font-family:  Merriweather;
+	font-size:  20px;
+	font-weight:  normal;
+	margin:  0 0 0.66em 0;
+	padding:  10px 0px 10px 40px;
+	text-align: left;
+	line-height: 1.4em; 
+}
+
+}
+blockquote: before { 
+	content: "“";
+	display: block;
+	height: 20px;
+	margin: 0 0 -20px -30px;
+	padding: 0;
+	font-size: 38px;
+	font-weight: bold; 
+}
+blockquote p { 
+	margin: 0; 
 }
 /* =Temporary styles until the
 		directory can read @import
@@ -1161,5 +1364,252 @@ img.dsq-widget-avatar, .page-link a, #gallery-1 img, .contact-field input, .cont
 .alignright {
 	float: right;
 }
-		
--------------------------------------------------------------- */
+*/
+
+
+#ask-ubuntu-hot-questions h3, #ask-ubuntu-random-question h3
+ { 
+	background:  url(/wp-includes/images/askubuntu-widget.png) no-repeat;
+	padding:  10px 0px 18px 50px;
+	border-bottom:  0px;
+	font-size:  18px !important;
+
+	font-weight: 900;
+ }
+
+#ask-ubuntu-hot-questions, #ask-ubuntu-random-question
+{
+	/* font-family: Arial, "sans-serif"; */
+}
+
+#ask-ubuntu-hot-questions li { 
+	border-bottom:  1px dotted #ddd;
+	position:  relative;
+	background-color:  #fff;
+	line-height:  25px;
+	font-weight:  bold;
+}
+
+#ask-ubuntu-hot-questions a  { 
+	display:  block;
+	padding:  5px 35px 5px 0;
+	font-size:  11pt;
+	color: #FF6500;
+ }
+
+#ask-ubuntu-hot-questions a: hover, #ask-ubuntu-random-question a: hover  { 
+	color:  #08a8c5 !important;
+	text-shadow:  0 -1px 0 #fff;
+ }
+
+#ask-ubuntu-hot-questions span  { 
+	color:  #a9a9a9;
+	position:  absolute;
+	right:  5px;
+	top:  50%;
+	margin-top:  -12px;
+	font-size:  24px;
+ }
+
+
+
+#ask-ubuntu-random-question div > a
+ { 
+	color:  #FF6500;
+	font-weight:  bold;
+	float:  left;
+	padding:  0px 5px 5px 0px;
+	width:  200px;
+	display:  inline;
+	font-size:  11pt;
+ }
+
+
+.auh-userbox
+ { 
+	float:  right;
+	width:  85px;
+	padding:  0px 0px 5px 10px;
+	text-align:  right;
+ }
+
+
+#auh-answer .auh-userbox
+ { 
+	width:  115px;
+ }
+
+
+.auh-userbox em
+ { 
+	display:  block;
+	font-weight:  bold;
+	font-style:  normal;
+	font-size:  1.1em;
+ }
+
+
+.auh-userbox a
+ { 
+	color:  #333;
+	margin-left:  -10px;
+ }
+
+
+.auh-userbox span
+ { 
+	font-size:  0.8em;
+	color:  #888;
+ }
+
+
+#auh-question > span, #auh-answer > span
+ { 
+	display:  block;
+	clear:  both;
+ }
+
+
+#auh-answer > b
+ { 
+	font-size:  14pt;
+	color:  #690;
+	float:  left;
+	width:  170px;
+	border-bottom:  1px solid #ccc;
+	padding-top:  8px;
+ }
+
+#twitter_head
+{
+	margin-bottom: 15px;
+	border-bottom: 1px solid #ddd;
+}
+
+#twitter_head > a
+{
+	display: block;
+	width: 100%;
+	padding: 10px 10px 15px 170px;
+	background: url(images/follow_me-c.png) no-repeat 0px 50%;
+	font-size: 13pt;
+	color: #444;
+	margin-bottom: 3px;
+}
+
+#twitter_head a:hover
+{
+	color: #0091ab;
+}
+
+#twitter_head > a:hover
+{
+	background: url(images/follow_me-a.png) no-repeat 0px 50%;
+}
+
+#twitter_head span
+{
+	padding: 0px;
+	font-size: 11pt;
+}
+
+#twitter_head span a
+{
+	font-size: 12pt;
+	color: #df5424;
+}
+
+#twitter_body a
+{
+	display: block;
+	overflow: hidden;
+	color: #fff;
+	padding-bottom: 10px;
+	margin-top: -10px;
+}
+
+#twitter_body > div:hover
+{
+	opacity: 0.7;
+}
+
+#twitter_body > div
+{
+	min-height: 70px;
+}
+
+#twitter_body .text
+{
+	height: 50px;
+	float: left;
+	overflow: hidden;
+	margin-top: -10px;
+	padding: 0px 5px 5px;
+	font-size: 14px;
+}
+
+#twitter_body div + div .text
+{
+	padding-top: 5px;
+}
+
+#twitter_body .num
+{
+	float: right;
+	position:relative;
+	top: 48px;
+	padding: 5px;
+	background: #0d7694;
+	background: rgba(0,0,0,0.5);
+	font-size: 7pt;
+}
+
+#twitter_body div + div .num
+{
+	top: 53px;
+}
+
+/* quote stuff */
+#oh-my-quotes blockquote 	 { font-size: 14pt; font-family: "Droid Serif", "Georgia"; font-weight: bold; padding-left: 30px; }
+#oh-my-quotes cite		 { font-style: normal; font-family: Merriweather; font-size: 12pt; color: #666;}
+#oh-my-quotes > a		 { float: right; font-size: 8pt; }
+#oh-my-quotes > a, #oh-my-quotes cite { line-height: 0pt; margin-bottom: 30px; }
+#oh-my-quotes blockquote::before { content: "“"; display: block; height: 20px; margin: 0 0 -20px -30px; padding: 0; font-size: 38px; font-weight: bold; }
+
+
+
+
+#network {
+	z-index: 20;
+	position: absolute;
+	width: 940px;
+/*	margin: -35px 0px 0px -470px;*/
+	margin: -70px 0px 0px -470px;
+	left: 50%;
+	list-style: none;
+	padding: 0px;
+	overflow: hidden;
+}
+	#network li {
+		float: right;
+		margin: 0px;
+		padding: 0px;
+		margin-top: 10px;
+	}
+	#network a {
+		display: block;
+		text-align: center;
+		line-height: 30px;
+		padding: 3px 10px;
+		font-size: 12pt;
+		text-decoration: none;
+		color: #4F4F4F;
+		margin-top: 25px;
+	}
+	#network .active a, #network a:hover {
+		background: #772953;
+		color: #fff;
+	}
+	#network a:hover {
+		opacity: 0.8;
+	}
