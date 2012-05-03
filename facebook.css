@@ -96,3 +96,6 @@ html {
 	position:relative;
 	top: 0;
 }
+.connections_grid {
+	height: 300px;
+}
