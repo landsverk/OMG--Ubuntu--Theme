@@ -9,14 +9,6 @@ Tags: ubuntu, linux, technology, opensource, canonical
 The Shape Theme for WordPress is copyright ThemeShapes http://themeshapes.com/
 Like WordPress, this work is released under GNU General Public License, version 2 (GPL).
 http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-
-*******************************
-Changelog for landsverk@github:
--
-19.04.2012
-Moved old content to [old]style.css
-Synced content with omgubuntu.co.uk/style.css
-*******************************
 .
 */
 
@@ -738,8 +730,8 @@ div.cat-links a.cat-poll {
 }
 
 div.cat-links a.cat-debian  {  background: url(http://www.omgubuntu.co.uk/wp-content/uploads/2011/02/debian.png) no-repeat center 5px #898989 !important; }
-div.cat-links a.cat-hardware-2  {  background: url(http://www.omgubuntu.co.uk/wp-content/uploads/2011/02/Computer.png) no-repeat center 5px #898989 !important; }
-div.cat-links a.cat-development  {  background: url(http://omgubuntu.co.uk/wp-content/uploads/2011/06/development.png) no-repeat center 5px #898989 !important; }
+div.cat-links a.cat-hardware-2  {  background: url(http://i.imgur.com/PjQR1.png) no-repeat center 5px #898989 !important; }
+div.cat-links a.cat-development  {  background: url(http://i.imgur.com/VjS3r.png) no-repeat center 5px #898989 !important; }
 
 .tag-links {
 	border-bottom: 1px dotted #EFEFEF;
