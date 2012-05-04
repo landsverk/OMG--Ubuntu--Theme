@@ -18,7 +18,8 @@
 	   	wp_enqueue_script('share_bar');
 	}
 	?>
-	<link rel="icon" type="image/x-icon" href="/wp-content/themes/omgubuntu/favicon.ico" />
+	<!--<link rel="icon" type="image/x-icon" href="/wp-content/themes/omgubuntu/favicon.ico" />-->
+    <link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/d0od" title="<?php printf( __( '%s latest posts', 'omgubuntu' ), wp_specialchars( get_bloginfo('name'), 1 ) ); ?>" />
 	<?php wp_head(); ?>
@@ -31,13 +32,13 @@
 		<div id="masthead">
 		
 			<div id="branding">
-				<?php $title = explode(" ", get_bloginfo( 'name' ) ); ?>
-				<div id="blog-title"><a href="<?php bloginfo( 'url' ) ?>/" title="You should click here to go back home" rel="home"><span id="o"><?php echo $title[0]; ?></span><span id="u"><?php echo $title[1]; ?></span></a></div>
+				<?php //$title = explode(" ", get_bloginfo( 'name' ) ); ?>
+				<div id="blog-title"><a href="<?php //bloginfo( 'url' ) ?>/" title="You should click here to go back home" rel="home"><span id="o"><?php echo $title[0]; ?></span><span id="u"><?php echo $title[1]; ?></span></a></div>
 <?php if ( is_home() || is_front_page() ) { ?>
-		    		<h1 id="blog-description"><?php bloginfo( 'description' ) ?></h1>
+		    		<h1 id="blog-description"><?php //bloginfo( 'description' ) ?></h1>
 <?php } else { ?>	
-		    		<div id="blog-description"><?php bloginfo( 'description' ) ?></div>
-<?php } ?>
+		    		<div id="blog-description"><?php //bloginfo( 'description' ) ?></div>
+<?php } ?> 
 			</div><!-- #branding --> 
 			
 			<div id="access">
